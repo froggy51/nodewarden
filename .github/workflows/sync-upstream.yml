@@ -14,5 +14,5 @@ jobs:
     steps:
       - name: Merge upstream main into fork
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.SYNC_TOKEN }}
         run: gh repo sync ${{ github.repository }} --branch main
